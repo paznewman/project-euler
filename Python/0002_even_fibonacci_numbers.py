@@ -7,11 +7,15 @@
 """
 
 def fib (i):
-    if i <= 0:
+    if i <= 1:
         return 1
-    if i == 1:
-        return 2
-    return fib(i-1) + fib(i-2)
+    p0 = 1
+    p1 = 1
+    f = 0
+    for i in range(2,i+1):
+        f = p0 + p1
+        p0, p1 = p1, f
+    return f
 
 def even_fibonacci (m):
     i=0
@@ -21,5 +25,6 @@ def even_fibonacci (m):
             yield f
         i += 1
         f = fib(i)
+
 
 print(sum(even_fibonacci(4000000)))
