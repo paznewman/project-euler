@@ -8,10 +8,10 @@
 """
 
 def sum_triplets (n):
-    """ generates all triplets of integers which sum up to _n_. """
+    """ generates all triplets of natural numbers which sum up to _n_. """
 
     def sum_pairs (n):
-        """ generates all pairs of integers which sum up to _n_. """
+        """ generates all pairs of natural numbers which sum up to _n_. """
         a = n-1
         while a >= 1:
             yield [a, n-a]
@@ -25,9 +25,9 @@ def sum_triplets (n):
 
 
 for triplet in sum_triplets(1000):
-    c = triplet[0]
-    b = triplet[1]
-    a = triplet[2]
+    c = triplet[0]  # we know c has to be bigger than a and b
+    a = triplet[1]
+    b = triplet[2]
     if a*a + b*b == c*c:
         print(a*b*c)
         break
