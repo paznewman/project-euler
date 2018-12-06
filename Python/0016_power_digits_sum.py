@@ -3,9 +3,6 @@
     What is the sum of the digits of the number 2^1000?
 """
 
+from utils import digit_sum
 num = pow(2, 1000)
-digit_sum = 0
-while num > 0:
-    digit_sum += num%10
-    num //= 10
-print(digit_sum)
+print(digit_sum(num))

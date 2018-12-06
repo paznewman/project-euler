@@ -5,14 +5,7 @@
     How many such routes are there through a 20×20 grid?
 """
 
-def factorial(n):
-    result = 1
-    while n > 1:
-        result *= n
-        n -= 1
-    return result
+from utils import choose
 
-def choose(n, k):
-    return factorial(n)//(factorial(k)*factorial(n-k))
 
 print(choose(40,20))    
